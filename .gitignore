@@ -43,3 +43,5 @@ avocado.yml
 
 *.sublime-project
 *.sublime-workspace
+
+.tags*
