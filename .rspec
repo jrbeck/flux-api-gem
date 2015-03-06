@@ -1,0 +1,5 @@
+--color
+-f progress
+-f JUnit
+-o reports/results.xml
+--require spec_helper
