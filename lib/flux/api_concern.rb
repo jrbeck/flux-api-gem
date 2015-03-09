@@ -24,6 +24,10 @@ module Flux
       JSON.parse(flux_token.get("/api/projects/metadata.json?ids=#{ids.join(',')}", request_headers).body).map(&:deep_symbolize_keys)
     end
 
+    def me
+      JSON.parse(flux_token.get("/api/users/me.json", request_headers).body).deep_symbolize_keys
+    end
+
     def request_headers
       { headers: { 'Accept' => "*/*,version=#{options[:api_version]}"} }
     end
