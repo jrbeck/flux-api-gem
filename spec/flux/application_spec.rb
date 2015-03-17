@@ -10,4 +10,6 @@ describe Flux::Application do
       expect(subject.flux_token.token).to eq 'abc123'
     end
   end
+
+  it_behaves_like 'api_concern'
 end

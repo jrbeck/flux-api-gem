@@ -6,6 +6,7 @@ require 'rspec'
 require 'webmock/rspec'
 require 'json'
 require 'flux'
+require 'active_support/core_ext/hash'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
