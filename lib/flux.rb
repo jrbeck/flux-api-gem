@@ -1,4 +1,4 @@
-
+require 'active_support/core_ext/hash'
 module Flux
   require 'flux/api_concern'
   require 'flux/application'
