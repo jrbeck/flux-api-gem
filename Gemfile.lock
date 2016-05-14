@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    flux-api (0.0.3)
+    flux-api (0.0.4)
       activesupport
       oauth2
 

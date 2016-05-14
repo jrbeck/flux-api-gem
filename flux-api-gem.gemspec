@@ -12,7 +12,6 @@ Gem::Specification.new do |gem|
   gem.license       = 'MIT'
 
   gem.files         = `git ls-files -z`.split("\x0")
-  gem.executables   = gem.files.grep(%r{^bin/}) { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
@@ -25,5 +24,4 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'webmock'
   gem.add_development_dependency 'json'
-
 end
