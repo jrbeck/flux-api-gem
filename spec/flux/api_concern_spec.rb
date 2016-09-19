@@ -23,6 +23,15 @@ shared_examples 'api_concern' do
     expect(stub).to have_been_requested
   end
 
+  it 'can get the batches' do
+    batches = [{ id: 1, title: 'Fall Retainer' }, { id: 2, title: 'T&M Support' }]
+    stub = stub_request(:get, 'https://metova.fluxhq.io/api/batches.json')
+           .with(headers: { 'Accept' => '*/*,version=3', 'Authorization' => 'Token abc123' })
+           .to_return(status: 200, body: batches.to_json, headers: { 'Content-Type' => 'application/json' })
+    expect(subject.batches).to eq batches
+    expect(stub).to have_been_requested
+  end
+
   it 'can get the products' do
     products = [{ id: 1, name: 'Product 1' }, { id: 2, name: 'Product 2' }]
     stub = stub_request(:get, 'https://metova.fluxhq.io/api/products.json')

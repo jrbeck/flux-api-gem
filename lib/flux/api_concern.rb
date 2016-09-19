@@ -8,6 +8,10 @@ module Flux
       JSON.parse(flux_token.get('/api/accounts.json', request_headers).body).map(&:deep_symbolize_keys)
     end
 
+    def batches
+      JSON.parse(flux_token.get('/api/batches.json', request_headers).body).map(&:deep_symbolize_keys)
+    end
+
     def products
       JSON.parse(flux_token.get('/api/products.json', request_headers).body).map(&:deep_symbolize_keys)
     end
