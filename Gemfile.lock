@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    flux-api (0.0.5)
+    flux-api (0.0.6)
       activesupport
       oauth2
 
@@ -79,4 +79,4 @@ DEPENDENCIES
   yarjuf
 
 BUNDLED WITH
-   1.11.2
+   1.12.3
